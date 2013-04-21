@@ -23,16 +23,16 @@ int carrega_lista(float vetor[20]){
 
     int i; /// Declara i como variável local
 
-    for (i=1; i<21; i++){       /// Faz um la�o at� que sejam digitados os 20 valores
+    for (i=1; i<21; i++){       /// Faz um laço até que sejam digitados os 20 valores
 
-        printf("\nInforme o valor %d de 20 : ",i);  /// Solicita que o usu�rio digite os valores
+        printf("\nInforme o valor %d de 20 : ",i);  /// Solicita que o usuário digite os valores
         scanf("%f",&vetor[i]);  /// Armazena os valores digitados
     }
 }
 
 /*!
  \brief Essa função ordena os 20 valores adiquiridos.
- \param vetor[20], vetor onde � armazenado os valores digitados.
+ \param vetor[20], vetor onde é armazenado os valores digitados.
  \return Retorna o um novo vetor ordenado.
  */
 
