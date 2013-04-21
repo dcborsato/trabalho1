@@ -6,10 +6,8 @@
  */
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include <math.h>
-
 float media = 0, vetor[20];
 
 /*!
@@ -79,7 +77,7 @@ int variancia(float vetor[20], float media){
 
     for (i = 1; i < 21; i++){
 
-        calc_var_desv = pow((vetor[i]-media),2) + calc_var_desv;
+        calc_var_desv = (vetor[i]-media)*(vetor[i]-media) + calc_var_desv;
         cont++;
 
     }
@@ -107,9 +105,6 @@ int main(int argc, char** argv){
     variancia(vetor,media);
 
     ordena(vetor);
-
-
-system("PAUSE");
 
 return(0);
 
