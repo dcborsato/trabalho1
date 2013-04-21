@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
+
 float media = 0, vetor[20];
 
 /*!
@@ -20,9 +21,9 @@ int carrega_lista(float vetor[20]){
 
     int i; /// Declara i como variável local
 
-    for (i=1; i<21; i++){       /// Faz um laço até que sejam digitados os 20 valores
+    for (i=0; i<21; i++){       /// Faz um laço até que sejam digitados os 20 valores
 
-        printf("\nInforme o valor %d de 20 : ",i);  /// Solicita que o usuário digite os valores
+        printf("\nInforme o valor %d de 20 : ",i+1);  /// Solicita que o usuário digite os valores
         scanf("%f",&vetor[i]);  /// Armazena os valores digitados
     }
 }
