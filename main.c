@@ -88,7 +88,7 @@ int variancia(float vetor[20], float media){
 
     variancia = calc_var_desv/cont;
     desvio = sqrt(variancia);
-    printf("\n\nA variancia dos valores lidos eh : %.4f\n", variancia);
+    printf("\n\nA variancia dos valores lidos eh : %.4f   %d \n", variancia, cont);
     printf("\n\nO desvio padrao dos valores lidos eh : %.4f\n\n\n", desvio);
 
 }
