@@ -25,7 +25,7 @@ int carrega_lista(float vetor[20]){
 	
         printf("\nInforme o valor %d de 20 : ",i+1);  /// Solicita que o usuário digite os valores
         scanf("%f",&vetor[i]);  /// Armazena os valores digitados
-	printf("\n\n%d\n",vetor[i]);
+	printf("\n\n%f\n",vetor[i]);
     }
 return vetor;
 }
@@ -58,7 +58,7 @@ int media_fnc(float vetor[20]){
     for (i = 0; i < 20; i++){
 
         media1 = vetor[i] + media1;
-        printf("%d - %d ,",i, vetor[i]);
+        printf("%d - %f ,",i, vetor[i]);
 	cont++;
 
     }
