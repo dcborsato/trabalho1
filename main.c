@@ -24,9 +24,10 @@ int carrega_lista(float vetor[20]){
     for (i=0; i<20; i++){       /// Faz um laço até que sejam digitados os 20 valores
 	
         printf("\nInforme o valor %d de 20 : ",i+1);  /// Solicita que o usuário digite os valores
-        scanf("%f",vetor[i]);  /// Armazena os valores digitados
+        scanf("%f",&vetor[i]);  /// Armazena os valores digitados
 	printf("\n\n%d\n",vetor[i]);
     }
+return vetor;
 }
 
 /*!
@@ -80,7 +81,7 @@ int variancia(float vetor[20], float media){
 
     for (i = 1; i < 21; i++){
 
-        calc_var_desv = (vetor[i]-media)*(vetor[i]-media) + calc_var_desv;
+	calc_var_desv = (vetor[i]-media)*(vetor[i]-media) + calc_var_desv;
         cont++;
 
     }
@@ -105,7 +106,7 @@ int main(int argc, char** argv){
 
     	carrega_lista(vetor);
 
-    	media_fnc(vetor);
+	media_fnc(vetor);
 
     	variancia(vetor,media);
 
