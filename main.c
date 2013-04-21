@@ -52,10 +52,11 @@ int media_fnc(float vetor[20]){
     float media, media1 = 0;
     char aux[10];
 
-    for (i = 1; i < 21; i++){
+    for (i = 0; i < 21; i++){
 
         media1 = vetor[i] + media1;
-        cont++;
+        printf("%d - %d ,",i, vetor[i]);
+	cont++;
 
     }
 
