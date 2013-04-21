@@ -9,7 +9,7 @@
 #include <string.h>
 #include <math.h>
 
-float media = 0, vetor[20];
+float media = 0;
 
 /*!
  \brief Essa função solicita ao usuário que o mesmo digite 20 valores.
@@ -101,13 +101,15 @@ int variancia(float vetor[20], float media){
 
 int main(int argc, char** argv){
 
-    carrega_lista(vetor);
+	float vetor[20];
 
-    media_fnc(vetor);
+    	carrega_lista(vetor);
 
-    variancia(vetor,media);
+    	media_fnc(vetor);
 
-    ordena(vetor);
+    	variancia(vetor,media);
+
+    	ordena(vetor);
 
 return(0);
 
