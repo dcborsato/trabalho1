@@ -17,13 +17,13 @@ float media = 0;
  \return Retorna o vetor preenchido.
  */
 
-int carrega_lista(float vetor[20]){
+int carrega_lista(int vetor[20]){
 
     int i; /// Declara i como variável local
 
     for (i=0; i<20; i++){       /// Faz um laço até que sejam digitados os 20 valores
         printf("\nInforme o valor %d de 20 : ",i+1);  /// Solicita que o usuário digite os valores
-        scanf("%f",&vetor[i]);  /// Armazena os valores digitados
+        scanf("%d",&vetor[i]);  /// Armazena os valores digitados
     }
 return vetor;
 }
@@ -34,10 +34,8 @@ return vetor;
  \return Retorna o um novo vetor ordenado.
  */
 
-int ordena(float vetor[20]){
-    int i = 20, cont = 0, j = 0;
-    float aux = 0;
-
+int ordena(int vetor[20]){
+    int i = 20, cont = 0, j = 0, aux = 0;
 
     for(cont = 0; cont<i; cont++){
 	for(j = cont+1; j<i; j++){
@@ -53,22 +51,22 @@ int ordena(float vetor[20]){
 
 
 	while(i<5){
-	     printf("%d - %.4f ,  ", i+1, vetor[i]);
+	     printf("%d - %d ,  ", i+1, vetor[i]);
 	     i++;
 	}
 	printf("\n");
 	while(i<10 && i>=5){
-	     printf("%d - %.4f ,  ", i+1, vetor[i]);
+	     printf("%d - %d ,  ", i+1, vetor[i]);
              i++;
 	}
         printf("\n");
         while(i<15 && i>=10){
-             printf("%d - %.4f ,  ", i+1, vetor[i]);
+             printf("%d - %d ,  ", i+1, vetor[i]);
              i++;
         }
         printf("\n");
         while(i<20 && i>=15){
-             printf("%d - %.4f ,  ", i+1, vetor[i]);
+             printf("%d - %d ,  ", i+1, vetor[i]);
              i++;
         }
 	printf("\n\n");
@@ -82,10 +80,10 @@ int ordena(float vetor[20]){
  \return Retorna a média dos valores obtidos.
  */
 
-int media_fnc(float vetor[20]){
+int media_fnc(int vetor[20]){
 
     int i, cont = 0;
-    float media = 0, media1 = 0;
+    float  media = 0, media1 = 0;
     char aux[10];
 
     for (i = 0; i < 20; i++){
@@ -103,7 +101,7 @@ return media;
  \return Retorna a variancia dos valores obtidos.
  */
 
-int variancia(float vetor[20], float media){
+int variancia(int vetor[20], float media){
 
     int i, cont = 0;
     float variancia = 0, calc_var_desv = 0, desvio = 0, soma, var = 0;
