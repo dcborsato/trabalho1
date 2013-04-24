@@ -46,7 +46,7 @@ int ordena(float vetor[20]){
 	     if(vetor[cont]>vetor[j]){
 		aux = vetor[cont];
 		vetor[cont] = vetor[j];
-		vetor[j] = aux
+		vetor[j] = aux;
 	     }
         }
     }
@@ -72,7 +72,7 @@ int ordena(float vetor[20]){
              printf("%d - %.4f", i+1, vetor[i]);
              i++;
         }
-retur vetor;
+return vetor;
 }
 
 
