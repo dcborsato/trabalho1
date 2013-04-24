@@ -90,7 +90,6 @@ int media_fnc(float vetor[20]){
     for (i = 0; i < 20; i++){
 
         media1 = vetor[i] + media1;
-        printf("%d - %f ,",i, vetor[i]);
 	cont++;
 
     }
@@ -111,7 +110,7 @@ int variancia(float vetor[20], float media){
     int i, cont = 0;
     float variancia = 0, calc_var_desv = 0, desvio = 0, soma;
 
-    for (i = 1; i < 21; i++){
+    for (i = 0; i < 20; i++){
 
 	calc_var_desv = (vetor[i]-media)*(vetor[i]-media) + calc_var_desv;
         cont++;
