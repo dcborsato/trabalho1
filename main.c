@@ -37,8 +37,42 @@ return vetor;
  */
 
 int ordena(float vetor[20]){
+    int i = 20, cont;
+    float aux;
 
 
+    for(cont = 0; cont<i; cont++){
+	for(j = cont+1; j<i; j++){
+	     if(vetor[cont]>vetor[j]){
+		aux = vetor[cont];
+		vetor[cont] = vetor[j];
+		vetor[j] = aux
+	     }
+        }
+    }
+    printf("\n\nImpressao do vetor ordenado :\n")
+    i = 0;
+
+	while(i<5){
+	     printf("%d - %.4f", i+1, vetor[i]);
+	     i++;
+	}
+	printf("\n");
+	while(i<10 && i>=5){
+	     printf("%d - %.4f", i+1, vetor[i]);
+             i++;
+	}
+        printf("\n");
+        while(i<15 && i>10){
+             printf("%d - %.4f", i+1, vetor[i]);
+             i++;
+        }
+        printf("\n");
+        while(i<20 && i>=15){
+             printf("%d - %.4f", i+1, vetor[i]);
+             i++;
+        }
+retur vetor;
 }
 
 
@@ -77,18 +111,19 @@ int media_fnc(float vetor[20]){
 int variancia(float vetor[20], float media){
 
     int i, cont = 0;
-    float variancia = 0, calc_var_desv = 0, desvio = 0;
+    float variancia = 0, calc_var_desv = 0, desvio = 0, soma;
 
     for (i = 1; i < 21; i++){
 
 	calc_var_desv = (vetor[i]-media)*(vetor[i]-media) + calc_var_desv;
         cont++;
+	soma = vetor[i]+soma;
 
     }
 
     variancia = calc_var_desv/cont;
     desvio = sqrt(variancia);
-    printf("\n\nA variancia dos valores lidos eh : %.4f   %d \n", variancia, cont);
+    printf("\n\nA variancia dos valores lidos eh : %.4f   %d    %.4f\n", variancia, cont, soma);
     printf("\n\nO desvio padrao dos valores lidos eh : %.4f\n\n\n", desvio);
 
 }
@@ -110,7 +145,7 @@ int main(int argc, char** argv){
 
     	variancia(vetor,media);
 
-    	ordena(vetor);
+    	vetor = ordena(vetor);
 
 return(0);
 
