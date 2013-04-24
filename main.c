@@ -53,22 +53,22 @@ int ordena(float vetor[20]){
 
 
 	while(i<5){
-	     printf("%d - %.4f , ", i+1, vetor[i]);
+	     printf("%d - %.4f ,  ", i+1, vetor[i]);
 	     i++;
 	}
 	printf("\n");
 	while(i<10 && i>=5){
-	     printf("%d - %.4f , ", i+1, vetor[i]);
+	     printf("%d - %.4f ,  ", i+1, vetor[i]);
              i++;
 	}
         printf("\n");
         while(i<15 && i>=10){
-             printf("%d - %.4f , ", i+1, vetor[i]);
+             printf("%d - %.4f ,  ", i+1, vetor[i]);
              i++;
         }
         printf("\n");
         while(i<20 && i>=15){
-             printf("%d - %.4f , ", i+1, vetor[i]);
+             printf("%d - %.4f ,  ", i+1, vetor[i]);
              i++;
         }
 	printf("\n\n");
@@ -93,7 +93,8 @@ int media_fnc(float vetor[20]){
 	cont++;
     }
     media = (media1/cont);
-    printf("\n\nA media dos valores lidos eh : %.4f\n", media);
+    printf("\n\nA media dos valores lidos eh : %.4f", media);
+return media;
 }
 
 /*!
@@ -105,20 +106,21 @@ int media_fnc(float vetor[20]){
 int variancia(float vetor[20], float media){
 
     int i, cont = 0;
-    float variancia = 0, calc_var_desv = 0, desvio = 0, soma;
+    float variancia = 0, calc_var_desv = 0, desvio = 0, soma, var = 0;
 
     for (i = 0; i < 20; i++){
 
-	calc_var_desv = (vetor[i]-media)*(vetor[i]-media) + calc_var_desv;
-        cont++;
+	var = (vetor[i]-media)*(vetor[i]-media) + calc_var_desv;
+        calc_var_desv = var;
+	cont++;
 	soma = vetor[i]+soma;
 
     }
 
     variancia = calc_var_desv/cont;
     desvio = sqrt(variancia);
-    printf("\n\nA variancia dos valores lidos eh : %.4f   %d    %.4f\n", variancia, cont, soma);
-    printf("\n\nO desvio padrao dos valores lidos eh : %.4f\n\n\n", desvio);
+    printf("\n\nA variancia dos valores lidos eh : %.4f", variancia);
+    printf("\n\nO desvio padrao dos valores lidos eh : %.4f", desvio);
 
 }
 
@@ -135,7 +137,7 @@ int main(int argc, char** argv){
 
     	carrega_lista(vetor);
 
-	media_fnc(vetor);
+	media = media_fnc(vetor);
 
     	variancia(vetor,media);
 
