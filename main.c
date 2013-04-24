@@ -22,7 +22,6 @@ int carrega_lista(float vetor[20]){
     int i; /// Declara i como variável local
 
     for (i=0; i<20; i++){       /// Faz um laço até que sejam digitados os 20 valores
-	
         printf("\nInforme o valor %d de 20 : ",i+1);  /// Solicita que o usuário digite os valores
         scanf("%f",&vetor[i]);  /// Armazena os valores digitados
     }
@@ -49,28 +48,30 @@ int ordena(float vetor[20]){
 	     }
         }
     }
-    printf("\n\nImpressao do vetor ordenado :\n");
+    printf("\n\nImpressao do vetor ordenado :\n\n");
     i = 0;
 
+
 	while(i<5){
-	     printf("%d - %.4f", i+1, vetor[i]);
+	     printf("%d - %.4f , ", i+1, vetor[i]);
 	     i++;
 	}
 	printf("\n");
 	while(i<10 && i>=5){
-	     printf("%d - %.4f", i+1, vetor[i]);
+	     printf("%d - %.4f , ", i+1, vetor[i]);
              i++;
 	}
         printf("\n");
         while(i<15 && i>=10){
-             printf("%d - %.4f", i+1, vetor[i]);
+             printf("%d - %.4f , ", i+1, vetor[i]);
              i++;
         }
         printf("\n");
         while(i<20 && i>=15){
-             printf("%d - %.4f", i+1, vetor[i]);
+             printf("%d - %.4f , ", i+1, vetor[i]);
              i++;
         }
+	printf("\n\n");
 }
 
 
@@ -84,19 +85,15 @@ int ordena(float vetor[20]){
 int media_fnc(float vetor[20]){
 
     int i, cont = 0;
-    float media, media1 = 0;
+    float media = 0, media1 = 0;
     char aux[10];
 
     for (i = 0; i < 20; i++){
-
         media1 = vetor[i] + media1;
 	cont++;
-
     }
-
     media = (media1/cont);
     printf("\n\nA media dos valores lidos eh : %.4f\n", media);
-
 }
 
 /*!
