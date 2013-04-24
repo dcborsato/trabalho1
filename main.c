@@ -25,7 +25,6 @@ int carrega_lista(float vetor[20]){
 	
         printf("\nInforme o valor %d de 20 : ",i+1);  /// Solicita que o usuário digite os valores
         scanf("%f",&vetor[i]);  /// Armazena os valores digitados
-	printf("\n\n%f\n",vetor[i]);
     }
 return vetor;
 }
@@ -63,7 +62,7 @@ int ordena(float vetor[20]){
              i++;
 	}
         printf("\n");
-        while(i<15 && i>10){
+        while(i<15 && i>=10){
              printf("%d - %.4f", i+1, vetor[i]);
              i++;
         }
@@ -72,7 +71,6 @@ int ordena(float vetor[20]){
              printf("%d - %.4f", i+1, vetor[i]);
              i++;
         }
-return vetor;
 }
 
 
@@ -145,7 +143,7 @@ int main(int argc, char** argv){
 
     	variancia(vetor,media);
 
-    	vetor = ordena(vetor);
+    	ordena(vetor);
 
 return(0);
 
