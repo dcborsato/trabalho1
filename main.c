@@ -37,8 +37,8 @@ return vetor;
  */
 
 int ordena(float vetor[20]){
-    int i = 20, cont;
-    float aux;
+    int i = 20, cont = 0, j = 0;
+    float aux = 0;
 
 
     for(cont = 0; cont<i; cont++){
@@ -50,7 +50,7 @@ int ordena(float vetor[20]){
 	     }
         }
     }
-    printf("\n\nImpressao do vetor ordenado :\n")
+    printf("\n\nImpressao do vetor ordenado :\n");
     i = 0;
 
 	while(i<5){
